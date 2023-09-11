@@ -24,8 +24,13 @@ h1{
 } 
 button{
   color:white;
-  width:100px;
+  width:120px;
   height:40px;
   border:none;
   background-color: blueviolet;
+ 
+}
+.printbtn{
+  border-radius: 10px;
+  float:right;
 }

@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import {Box} from '@mui/material';
 import React, { Component } from "react";
 import Resume from "./components/Resume"
+import ReactToPrint from 'react-to-print';
 class App extends Component {
+
   state = {
     firstname: "",
     lastname: "",
@@ -40,7 +42,7 @@ class App extends Component {
         <AppBar position="static">
         <Toolbar>
         
-          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1, fontFamily:"Calibri, sans"}}>
             CV Builder
           </Typography>
       
@@ -51,8 +53,18 @@ class App extends Component {
             updateUniversalState={this.updateState}
             universalState={this.state}
           />
-          <Resume universalState={this.state} />
+          
+          <Resume ref={el => {this.componentRef = el}} universalState={this.state}>
+            
+          </Resume>
+         
         </Box>
+        <ReactToPrint trigger={() => {
+            return (<button className="printbtn">Print this out!</button>)
+          }}
+          content={() => this.componentRef}
+          />
+  
       </div>
     )
   }

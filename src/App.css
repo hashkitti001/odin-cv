@@ -1,0 +1,15 @@
+@media print {
+    /* Apply these styles when printing */
+    body {
+      margin: 0; /* Remove default margins */
+    }
+  
+    /* Set the width of the printed component to 100% */
+    div {
+      width: 100%;
+    }
+  
+    /* Add any other print-specific styles here */
+  }
+  
+    
