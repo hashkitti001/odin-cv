@@ -43,7 +43,7 @@ class EducationExp extends Component {
     }
     
     render() {
-        const {education} = this.state 
+        // const {education} = this.state 
         return (
             this.state.internal.map((edInfo, index) => {
                 return (

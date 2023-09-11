@@ -1,7 +1,6 @@
-import React, { Component, } from "react";
+import React from "react";
 import Avatar from "@mui/material/Avatar"
 import { Paper } from '@mui/material';
-import ReactToPrint from "react-to-print";
 class Resume extends React.PureComponent {
   constructor(props) {
     super(props);
